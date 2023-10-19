@@ -10,7 +10,6 @@ frappe.tags.utils = {
 
 		if (!frappe.tags.tags) {
 			frappe.tags.utils.fetch_tags();
-			return [];
 		}
 
 		for (let i in frappe.tags.tags) {
