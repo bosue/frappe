@@ -83,7 +83,7 @@ function get_version_timeline_content(version_doc, frm) {
 				}
 			} else {
 				const df = frappe.meta.get_docfield(frm.doctype, p[0], frm.docname);
-				if (df && !df.hidden) {
+				if (df && !df.hidden && !df.read_only) {
 					const field_display_status = frappe.perm.get_field_display_status(
 						df,
 						null,
